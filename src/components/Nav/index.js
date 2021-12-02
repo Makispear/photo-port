@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers'
 
 function Nav(props) {
-  
   // deconstruct props from the upper state which is the App component
   const { categories = [], setCurrentCategory, currentCategory } = props;
   // changes title of document 
