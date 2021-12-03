@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-
-// import photo from '../../assets/small/commercial/0.jpg';
-
+// import Modal from '../Modal';
 
 function PhotoList({ category }) {
   
@@ -106,9 +104,10 @@ function PhotoList({ category }) {
   return (
     <div>
       <div className="flex-row">
-        {photos.map((image, i) => (
+        {/* filter phots by categories  */}
+        {photos.filter(image => image.category === category).map((image, i) => (
           <img
-            src={require(`../../assets/small/${category}/${i}.jpg`).default}
+            src={require(`../../assets/small/${category}/${i}.jpg`).default }
             alt={image.name}
             className="img-thumbnail mx-1"
             key={image.name}
